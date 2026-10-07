@@ -16,7 +16,7 @@
     <header class="hero">
         <div class="hero-content">
             <div class="logo-container">
-                <img src="img/logo.jpng" alt="DA LAGOA Barra Móvil" class="main-logo">
+                <img src="img/logo.jpng" alt="DA LAGOA Barra Móvil" class="main-logo-extra-large">
             </div>
             <h1>Barra de Autor y Clásica</h1>
             <p class="subtitle"><i class="fa-solid fa-location-dot"></i> Córdoba, Argentina</p>
@@ -66,10 +66,38 @@
             </div>
         </section>
 
+        <section class="booking-section">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h2>Reserva Fecha para tu Evento</h2>
+                    <p>Consulta la disponibilidad para tu fiesta o reunión privada</p>
+                </div>
+                <form class="booking-form" onsubmit="event.preventDefault(); sendBooking();">
+                    <div class="form-group">
+                        <label for="event-date"><i class="fa-solid fa-calendar-days"></i> Selecciona la Fecha:</label>
+                        <input type="date" id="event-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-type"><i class="fa-solid fa-glass-cheers"></i> Tipo de Evento:</label>
+                        <select id="event-type" required>
+                            <option value="Cumpleaños">Cumpleaños</option>
+                            <option value="Casamiento">Casamiento</option>
+                            <option value="Reunión Social">Reunión Social</option>
+                            <option value="Evento Privado">Evento Privado</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="booking-btn">
+                        <i class="fab fa-whatsapp"></i> Consultar Disponibilidad por WhatsApp
+                    </button>
+                </form>
+            </div>
+        </section>
+
         <section class="menu-section">
             <div class="section-title-wrap">
                 <h2>Carta de Tragos & Gastronomía</h2>
-                <p>Coctelería de autor y sushi para una experiencia única</p>
+                <p>Coctelería de autor, clásicos internacionales y maridaje gourmet</p>
             </div>
             
             <div class="menu-grid">
@@ -94,7 +122,7 @@
 
                 <article class="card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=700&q=80" alt="Combos de Sushi Premium">
+                        <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=700&q=80" alt="Tabla Sushi Premium">
                         <span class="card-tag">Especial</span>
                     </div>
                     <div class="card-body">
@@ -179,6 +207,77 @@
                     </div>
                 </article>
 
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=700&q=80" alt="Gin Tonic Especiado">
+                        <span class="card-tag">Clásico Premium</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Gin Tonic Especiado</h3>
+                            <span class="price">$ x</span>
+                        </div>
+                        <p class="description">Gin premium, agua tónica artesanal, bayas de enebro, pimienta rosa y rodaja de pepino fresco.</p>
+                        <div class="pair">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Maridaje: Ceviches y Entradas Marinas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80" alt="Vodka Frutal Tropikal">
+                        <span class="card-tag gold">Favorito</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Vodka Frutal Tropikal</h3>
+                            <span class="price">$ x</span>
+                        </div>
+                        <p class="description">Vodka destilado, mezcla de frutos rojos macerados, licor de frutos del bosque y un toque de lima.</p>
+                        <div class="pair">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Maridaje: Hot Rolls & Langostinos</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=700&q=80" alt="Mojito Menta & Ginger">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Mojito Menta & Ginger</h3>
+                            <span class="price">$ x</span>
+                        </div>
+                        <p class="description">Ron blanco, hojas de menta fresca, jugo de lima, azúcar orgánico, almíbar de jengibre y agua con gas.</p>
+                        <div class="pair">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Maridaje: Tempura de Verduras</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=80" alt="Negroni Ahumado">
+                        <span class="card-tag">Intenso</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Negroni Ahumado</h3>
+                            <span class="price">$ x</span>
+                        </div>
+                        <p class="description">Gin, Campari, Vermouth Rosso ahumado en madera de roble con piel de naranja flameada.</p>
+                        <div class="pair">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Maridaje: Sashimi de Atún y Salmón</span>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
 
@@ -206,6 +305,19 @@
         <p class="brand">DA LAGOA - Barra Móvil</p>
         <p>Córdoba, Argentina &copy; 2026</p>
     </footer>
+
+    <script>
+        function sendBooking() {
+            const date = document.getElementById('event-date').value;
+            const type = document.getElementById('event-type').value;
+            if(!date) {
+                alert('Por favor selecciona una fecha');
+                return;
+            }
+            const msg = `Hola! Quisiera consultar la disponibilidad para un evento (${type}) el día ${date} con DA LAGOA Barra Móvil.`;
+            window.open(`https://wa.me/5493524426651?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
 
 </body>
 </html>
